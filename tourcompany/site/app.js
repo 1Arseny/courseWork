@@ -27,9 +27,9 @@ app.use(function(req, res, next){
 });
 
 
-// app.all('*', (req, res) => {
-//     res.status(404).render('pages/404');
-// }); 
+app.all('*', (req, res) => {
+    res.status(404).render('pages/404');
+}); 
 
 
 // START SERVER
