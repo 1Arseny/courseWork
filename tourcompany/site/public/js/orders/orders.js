@@ -74,12 +74,12 @@ function showAllOrders(orders){
     let grid = document.querySelector('.grid_list');
     grid.innerHTML = '';
 
-    orders.forEach(order => {
+    orders.forEach((order, index) => {
         let container = document.createElement('div');
         container.classList.add('card');
         container.innerHTML = `
         <h3 class="card__title">
-            Заказ №${order.id}
+            Заказ №${index+1}
         </h3>
         <div class="card__item">
             <span>Название путевки:</span> <a class="order_link" href="/tour/${order.tourId}">${order.tourName}</a>

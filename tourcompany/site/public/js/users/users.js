@@ -36,12 +36,12 @@ function showClietns(users) {
     </form>
     `;
 
-    users.forEach(user => {
+    users.forEach((user, index) => {
         let container = document.createElement('div');
         container.classList.add('card');
         container.innerHTML = `
             <h3 class="card__title">
-                Сотрудник №${user.id}
+                Сотрудник №${index+1}
             </h3>
             <div class="card__item">
                 <span>Логин:</span> ${user.login}

@@ -83,12 +83,12 @@ function showClietns(clients) {
     </form>
     `;
 
-    clients.forEach(client => {
+    clients.forEach((client, index) => {
         let container = document.createElement('div');
         container.classList.add('card');
         container.innerHTML = `
             <h3 class="card__title">
-                Клиент №${client.id}
+                Клиент №${index+1}
             </h3>
             <div class="card__item">
                 <span>ФИО:</span> ${client.credentials}
